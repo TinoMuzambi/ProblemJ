@@ -16,7 +16,6 @@ TODO Optimise code.
 class Stock {
     private int p, a, b, c, d, n;
     private ArrayList<Double> prices;//2D?
-    private HashMap<Double,Integer> price;
 
     Stock(int p, int a, int b, int c, int d, int n) {
         this.p = p;
@@ -33,7 +32,7 @@ class Stock {
      */
     void populateArray() {
         prices=new ArrayList<>();
-        price=new HashMap<>();
+        HashMap<Double,Integer> price=new HashMap<>();
         for (int i = 1; i < n+1; i++) {
             prices.add(p*(Math.sin(a*i+b)+Math.cos(c*i+d)+2));
             price.put(p*(Math.sin(a*i+b)+Math.cos(c*i+d)+2),i);
